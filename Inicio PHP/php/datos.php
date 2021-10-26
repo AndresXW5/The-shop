@@ -7,8 +7,8 @@ $correo = $_POST['Correo'];
 $contraseña = $_POST['Contraseña'];
 $fecha = $_POST['Fecha'];
 
-// No funciona
-// $admin = $_GET['admin'];
+
+
 
 echo "El nombre es ".$nombre.", la edad es ".$edad.", los apellidos son ".$apellidos.
     ". Su correo es: " .$correo. ", su contraseña es " .$contraseña. " y su fecha de nacimiento es " .$fecha. "<br>" ;

@@ -21,7 +21,7 @@ if(!$con){
        
     mysqli_set_charset($con, "utf8");
     echo "Se ha establecido correctamente la conexion a la base de datos <br>";
-
+    
     echo "<br>";
 
     //Comprobacion de contraseña
