@@ -32,16 +32,70 @@
 <body>
     
 
+
         <div class="container">
             <?php
                 include '/bd.php';
 
-                
-        
-
 
             ?>
         </div>
+
+        <div class="primerSector">
+            <div class="s1">
+                <a href="../php/perfil.php" title="Nike Sb">
+                    <img class="img1" src="../imagenes/Catalogo_Nike.jpg" alt="Nike sb">
+                </a>    
+            </div>
+        </div>       
+
+        <div class="segundoSector">
+            <div class="s1">
+                <a href="../php/perfil.php" title="Carhartt">
+                    <img class="img2" src="../imagenes/Catalogo_Carhartt.jpg" alt="Carhartt">
+                </a>    
+            </div>
+        </div>
+
+        
+        <div class="tercerSector">
+            <div class="s1">
+                <a href="../php/perfil.php" title="Adidas">
+                    <img class="img1" src="../imagenes/Catalogo_Adidas.jpg" alt="Nike sb">
+                </a>    
+           </div>
+        </div>  
+
+
+
+        <div class="cuartoSector">
+            <div class="s1">
+                <a href="../php/perfil.php" title="Vans">
+                    <img class="img2" src="../imagenes/Catalogo_Carhartt.jpg" alt="Carhartt">
+                </a>    
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Pie de pagina
+    <footer class="footer">
+        <div class="container">
+            <p>
+                Sitio web de SkateXW5
+            </p>
+        </div>
+    </footer>             -->
+
 
 
 

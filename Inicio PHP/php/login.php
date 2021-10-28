@@ -3,6 +3,7 @@ $correo = $_POST['Correo'];
 $contraseña = $_POST['Contraseña'];
 
 
+
 echo "El usuario " .$correo. " con contrasena " .$contraseña . " ha fallado el inicio de sesion<br>";
 
 //--------------------
@@ -25,7 +26,7 @@ if(!$con){
     echo "<br>";
 
     //Comprobacion de contraseña
-    $sql2="SELECT `correo` , `contraseña` FROM `alumnos` WHERE `correo` = '$correo' AND `Contraseña` = '$contraseña'";
+    $sql2="SELECT `correo` , `contraseña`,`admin` FROM `alumnos` WHERE `correo` = '$correo' AND `Contraseña` = '$contraseña'";
 
     $consulta=mysqli_query($con,$sql2);
 
@@ -35,10 +36,24 @@ if(!$con){
     }else{
 
         $fila=$consulta->fetch_assoc();
-            if ($contraseña == $fila["contraseña"]){
-                header("Location: ./perfil.php?correo=" . $correo);
+
+            if ($contraseña == $fila["contraseña"] && 1 == $fila["admin"]) {
+                header("Location: ./catalogo_admin.php");
             }
 
+        
+            else if ($contraseña == $fila["contraseña"]){
+                header("Location: ./perfil.php?correo=" . $correo);
+            } 
+            
+            
+// codigo original 
+            // if ($contraseña == $fila["contraseña"]){
+            //     header("Location: ./perfil.php?correo=" . $correo);
+            // } 
+            
+            
+           
         
     }
 

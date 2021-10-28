@@ -1,4 +1,5 @@
 <?php
+
 $nombre = $_POST['Nombre'];
 $apellidos = $_POST['Apellidos'];
 $edad = $_POST['Edad'];
@@ -6,8 +7,6 @@ $edad = $_POST['Edad'];
 $correo = $_POST['Correo'];
 $contraseña = $_POST['Contraseña'];
 $fecha = $_POST['Fecha'];
-
-
 
 
 echo "El nombre es ".$nombre.", la edad es ".$edad.", los apellidos son ".$apellidos.
