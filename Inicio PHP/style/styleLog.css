@@ -10,6 +10,12 @@ https://codepen.io/marcobiedermann/pen/qahmr/?editors=1100
 box-sizing: inherit;
 }
 
+.login{
+    
+    margin: auto;
+    margin-top: 100px;
+}
+
 html {
 box-sizing: border-box;
 }
@@ -42,6 +48,7 @@ max-width: 100%;
 vertical-align: middle;
 }
 
+
 /* ---------- ALIGN ---------- */
 .align {
 display: grid;
@@ -50,10 +57,16 @@ place-items: center;
 
 /* ---------- BUTTON ---------- */
 
+.button1 {
+    background-color: #d7da48;
+    color: #fff;
+    padding: 0.25em 1.5em;
+}
+    
 .button {
-background-color: #33cc77;
-color: #fff;
-padding: 0.25em 1.5em;
+    background-color: #33cc77;
+    color: #fff;
+    padding: 0.25em 1.5em;
 }
 
 .button:focus,
@@ -61,6 +74,10 @@ padding: 0.25em 1.5em;
 background-color: #28ad63;
 }
 
+.button1:focus,
+.button1:hover {
+background-color: #c4c13f;
+}
 /* ---------- ICONS ---------- */
 .icons {
 display: none;
@@ -94,6 +111,21 @@ margin-top: 0;
 margin-bottom: 0;
 }
 
+.login__headerErr {
+    background-color: #ff0000;
+    border-top-left-radius: 1.25em;
+    border-top-right-radius: 1.25em;
+    color: #fff;
+    padding: 1.25em 1.625em;
+    }
+.login__headerErr :first-child {
+    margin-top: 0;
+    }
+
+.login__headerErr :last-child {
+    margin-bottom: 0;
+    }
+
 .login h2 .icon {
 margin-right: 14px;
 }
@@ -123,4 +155,8 @@ width: 100%;
 .login input[type="submit"] {
 display: block;
 margin: 0 auto;
+}
+
+.botones{
+    display: inline-flex;
 }

@@ -2,8 +2,6 @@
 $correo = $_POST['Correo'];
 $contraseña = $_POST['Contraseña'];
 
-
-
 echo "El usuario " .$correo. " con contrasena " .$contraseña . " ha fallado el inicio de sesion<br>";
 
 //--------------------
@@ -31,8 +29,7 @@ if(!$con){
     $consulta=mysqli_query($con,$sql2);
 
     if(!$consulta){
-        die("<br>No se ha podido realizar el SELCT");
-        
+        die("<br>No se ha podido realizar el SELCT"); 
     }else{
 
         $fila=$consulta->fetch_assoc();
@@ -40,56 +37,19 @@ if(!$con){
             if ($contraseña == $fila["contraseña"] && 1 == $fila["admin"]) {
                 header("Location: ./catalogo_admin.php");
             }
-
-        
+ 
             else if ($contraseña == $fila["contraseña"]){
                 header("Location: ./perfil.php?correo=" . $correo);
             } 
-            
-            
-// codigo original 
-            // if ($contraseña == $fila["contraseña"]){
-            //     header("Location: ./perfil.php?correo=" . $correo);
-            // } 
-            
-            
-           
-        
+
+            if ($contraseña =! $fila["contraseña"]){
+                header("Location: ../html/loginErrores/errLogin.html");
+            }
+  
     }
 
-
-
-
-//Lo del tutorial
-/*    
-    $select="SELECT * FROM ALUMNOS";
-
-    $consulta=mysqli_query($con,$select);
-
-    $fila=mysqli_fetch_row($consulta);
-
-    echo $fila[0];
-    echo $fila[1];
-    echo $fila[2];
-    echo $fila[3];
-
-    echo "<br>";
-
-    if($sql != $correo){
-        echo "La contrasena es incorrecta";
-    }else if($sql[`correo`] == $correo){
-        echo "Se ha iniciado sesion correctamente";
     }
 
-
-    echo "<br>";
-    if(!$consulta){
-        die("No se ha podido realizar el SELCT");
-    }else{
-        echo "El SELECT se ha realziado correctamente.";
-    }
-*/
-    }
 
 ?>
 

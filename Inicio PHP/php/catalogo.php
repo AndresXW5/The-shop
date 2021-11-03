@@ -71,7 +71,7 @@
         <div class="cuartoSector">
             <div class="s1">
                 <a href="../php/perfil.php" title="Vans">
-                    <img class="img2" src="../imagenes/Catalogo_Carhartt.jpg" alt="Carhartt">
+                    <img class="img2" src="../imagenes/Catalogo_Vans.jpg" alt="Carhartt">
                 </a>    
             </div>
         </div>
