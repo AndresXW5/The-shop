@@ -1,7 +1,11 @@
 <?php
 
-
+// include '../php/bd.php';
+require_once('/php/CreateDd.php');
 require_once('./php/component.php');
+
+//Instancia en la base de datos
+$database = new CreateDd($bd="daw2", $tablename="productos");
 
 
 ?>
@@ -30,10 +34,10 @@ require_once('./php/component.php');
         <div class="container">
             <div class="row text-center py-5">
                 <?php
-                    component($productName="Nike", $productPrice="65.55", $productImage="../imagenes/Catalogo_Nike.jpg");
-                    component($productName="Carhartt", $productPrice="65.55", $productImage="../imagenes/Catalogo_Carhartt.jpg");
-                    component($productName="Adidas", $productPrice="65.55", $productImage="../imagenes/Catalogo_Adidas.jpg");
-                    component($productName="Vans", $productPrice="65.55", $productImage="../imagenes/Catalogo_Vans.jpg");
+                     $result = $database->getData();
+                     while ($row = mysqli_fetch_assoc($result)) {
+                        component($row['nombre_producto']);
+                     }
 
                 ?>
                 
