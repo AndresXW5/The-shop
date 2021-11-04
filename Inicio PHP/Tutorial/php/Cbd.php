@@ -4,7 +4,6 @@ include '/bd.php';
 
 class CreateDB{
 
-
 }
 
 public function getData(){
@@ -15,12 +14,7 @@ public function getData(){
     if (mysqli_num_rows($consulta) > 0) {
         return $consulta;
     }
-
-
     }
-
-
-
 
 
 ?>

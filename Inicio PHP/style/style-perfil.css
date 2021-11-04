@@ -17,7 +17,8 @@ iframe{
 }
 
 header {
-    background: #383838;
+    background: rgb(0,0,3);
+    background: linear-gradient(90deg, rgba(0,0,3,1) 0%, rgba(56,56,56,1) 33%, rgba(105,105,105,1) 100%);
     font-size: large;
 
     padding: 1rem 0;

@@ -58,7 +58,7 @@ place-items: center;
 /* ---------- BUTTON ---------- */
 
 .button1 {
-    background-color: #d7da48;
+    background-color: #d8db2d;
     color: #fff;
     padding: 0.25em 1.5em;
 }
@@ -76,7 +76,7 @@ background-color: #28ad63;
 
 .button1:focus,
 .button1:hover {
-background-color: #c4c13f;
+background-color: #c7c746;
 }
 /* ---------- ICONS ---------- */
 .icons {
@@ -123,6 +123,22 @@ margin-bottom: 0;
     }
 
 .login__headerErr :last-child {
+    margin-bottom: 0;
+    }
+
+.login__headerRe {
+    background-color: #3fbd4a;
+    border-top-left-radius: 1.25em;
+    border-top-right-radius: 1.25em;
+    color: #fff;
+    padding: 1.25em 1.625em;
+    }
+
+.login__headerRe :first-child {
+    margin-top: 0;
+    }
+
+.login__headerRe :last-child {
     margin-bottom: 0;
     }
 
