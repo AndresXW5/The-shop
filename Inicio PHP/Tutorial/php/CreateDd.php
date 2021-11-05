@@ -1,6 +1,6 @@
 <?php
 
-include '/bd.php';
+// include '/bd.php';
 
 class CreateDd{
 
@@ -15,8 +15,8 @@ class CreateDd{
     $servidor ="localhost",
     $usuario ="root",
     $password ="usbw",
-    $bd ="daw2"
-    $tablename ="productos";
+    $bd ="daw2",
+    $tablename ="productos"
     ){
         $this->bd = $bd;
         $this->tablename = $tablename;
@@ -25,7 +25,7 @@ class CreateDd{
         $this->pasword = $password;
 
         //create conection
-        $this->con = mysqli_connect($servidor, $usuario, $password);
+        $this->con = mysqli_connect("localhost","root","usbw");
 
         //check
         if(!$this->con){
@@ -33,8 +33,28 @@ class CreateDd{
         }
 
         //consulta
-        // sql="CREATE DA"
+        $sql="CREATE DATABASE IF NOT EXISTS $bd";
 
+        /*
+        //Ejecutar consulta
+        if(mysqli_query($this->con, $sql)){
+
+            $this->con = mysqli_connect($servidor, $usuario, $password, $bd);
+
+            //Crear nueva tabla
+            $sql = "CREATE TABLE IF NOT EXISTS $tablename
+
+
+            ";
+
+            if (!mysqli_query($this->con, $sql)) {
+                echo "Creando la tabla: " . mysqli_error($this->con);
+            }
+
+        }else{
+            return false;
+        }
+        */
 
     }
 
@@ -43,15 +63,15 @@ class CreateDd{
 
 }
 
-// public function getData(){
-//     $sql3= "SELECT * FROM `productos`";
+ function getData(){
+    $sql= "SELECT * FROM '$this->tablename'";
 
-//     $consulta=mysqli_query($con,$sql3);
+    $result=mysqli_query($this->con, $sql);
 
-//     if (mysqli_num_rows($consulta) > 0) {
-//         return $consulta;
-//     }
-//     }
+    if (mysqli_num_rows($result) > 0) {
+        return $result;
+    }
+    }
 
 
 ?>

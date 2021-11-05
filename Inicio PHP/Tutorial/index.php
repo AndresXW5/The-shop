@@ -39,6 +39,10 @@ $database = new CreateDd($bd="daw2", $tablename="productos");
                         component($row['nombre_producto']);
                      }
 
+                    // component($productName="Nike", $productPrice="65.55", $productImage="../imagenes/Catalogo_Nike.jpg");
+                    // component($productName="Carhartt", $productPrice="65.55", $productImage="../imagenes/Catalogo_Carhartt.jpg");
+                    // component($productName="Adidas", $productPrice="65.55", $productImage="../imagenes/Catalogo_Adidas.jpg");
+                    // component($productName="Vans", $productPrice="65.55", $productImage="../imagenes/Catalogo_Vans.jpg");
                 ?>
                 
                 
