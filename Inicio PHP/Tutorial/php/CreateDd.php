@@ -2,7 +2,7 @@
 
 // include '/bd.php';
 
-class CreateDd{
+class CreateDb{
 
     public $servidor;
     public $usuario;
@@ -16,7 +16,7 @@ class CreateDd{
     $usuario ="root",
     $password ="usbw",
     $bd ="daw2",
-    $tablename ="productos"
+    $tablename ="test"
     ){
         $this->bd = $bd;
         $this->tablename = $tablename;
@@ -26,7 +26,7 @@ class CreateDd{
 
         //create conection
         $this->con = mysqli_connect("localhost","root","usbw");
-
+    
         //check
         if(!$this->con){
             die("Error de conexión" . mysqli_connect_error());
@@ -35,43 +35,48 @@ class CreateDd{
         //consulta
         $sql="CREATE DATABASE IF NOT EXISTS $bd";
 
-        /*
+        
         //Ejecutar consulta
         if(mysqli_query($this->con, $sql)){
 
-            $this->con = mysqli_connect($servidor, $usuario, $password, $bd);
+            $this->con = mysqli_connect($servidor, $usuario, $password);
 
             //Crear nueva tabla
             $sql = "CREATE TABLE IF NOT EXISTS $tablename
-
-
-            ";
+                (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                product_name VARCHAR (25) NOT NULL,
+                product_price FLOAT,
+                product_image VARCHAR (100)
+            
+            );";
 
             if (!mysqli_query($this->con, $sql)) {
-                echo "Creando la tabla: " . mysqli_error($this->con);
+                echo "Error creando la tabla: " . mysqli_error($this->con);
             }
 
         }else{
             return false;
         }
-        */
+    /**/  
 
     }
 
+    public function getData(){
+        $sql= "SELECT * FROM $this->tablename";
 
+        $result = mysqli_query($this->con, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            return $result;
+        }
+        // return $a + $b;
+    
+    }
 
 
 }
 
- function getData(){
-    $sql= "SELECT * FROM '$this->tablename'";
-
-    $result=mysqli_query($this->con, $sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        return $result;
-    }
-    }
+    
 
 
 ?>
