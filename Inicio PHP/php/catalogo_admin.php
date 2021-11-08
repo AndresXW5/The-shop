@@ -31,14 +31,75 @@
     </header>
 <body>
     
+    <div class="container2">
+            
 
-        <div class="container2">
-            <?php
-                include '/bd.php';
+     
+        <h1>Administracion de productos</h1>
+        <table class="rwd-table">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Marca</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th></th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        <tr>
+            <td data-th="id_producto">1-2-3...</td>
+            <td data-th="nombre_producto">Nombre del producto</td>
+            <td data-th="marca_producto">Marca</td>
+            <td data-th="tipo_producto">Ropa-zapatos...</td>
+            <td data-th="precio_producto">125€</td>
+            <td data-th="imagen_producto">URL imag</td>
 
-            ?>   
+            <td></td>
+            <td data-th="editar">
+                <button>Editar</button>
+            </td>
+            <td data-th="eliminar">
+                <button>Eliminar</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td data-th="id_producto">1-2-3...</td>
+            <td data-th="nombre_producto">Nombre del producto</td>
+            <td data-th="marca_producto">Marca</td>
+            <td data-th="tipo_producto">Ropa-zapatos...</td>
+            <td data-th="precio_producto">125€</td>
+            <td data-th="imagen_producto">URL imag</td>
+
+            <td></td>
+            <td data-th="editar">
+                <button>Editar</button>
+            </td>
+            <td data-th="eliminar">
+                <button>Eliminar</button>
+            </td>
+        </tr>
         
-            
+        <tr>
+            <td data-th="id_producto">1-2-3...</td>
+            <td data-th="nombre_producto">Nombre del producto</td>
+            <td data-th="marca_producto">Marca</td>
+            <td data-th="tipo_producto">Ropa-zapatos...</td>
+            <td data-th="precio_producto">125€</td>
+            <td data-th="imagen_producto">URL imag</td>
+
+            <td></td>
+            <td data-th="editar">
+                <button>Editar</button>
+            </td>
+            <td data-th="eliminar">
+                <button>Eliminar</button>
+            </td>
+        </tr>
+        
+        </table>
 
             
 
@@ -48,9 +109,9 @@
 
 
 
-        </div>
+    </div>
 
-
+    </form>
 
 </body>
 </html>
