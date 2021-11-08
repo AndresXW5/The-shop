@@ -32,15 +32,22 @@
 <body>
     
 
-        <div class="container">
+        <div class="container2">
             <?php
                 include '/bd.php';
 
-                
+            ?>   
         
+            
+
+            
 
 
-            ?>
+
+
+
+
+
         </div>
 
 
