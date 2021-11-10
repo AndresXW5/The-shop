@@ -31,6 +31,7 @@
     </header>
 <body>
     
+    <form action="bd_admin.php" method="post">
     <div class="container2">
             
 
