@@ -6,9 +6,13 @@
 
 body {
     margin-left: 0px;
-    background: #bbbbbb;
-    font-family: 'calibri';
+    color: #444;
+    background: #757575;
+    font-family: Montserrat, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     font-size: large;
+    padding: 0 2em;
 }
 
 iframe{
@@ -198,6 +202,9 @@ nav ul li a:hover::before{
 
 /* /////////////////////////////////////////TABLA///////////////////////// */
 
+.add{
+  margin-top: 3rem;
+}
 
 
 
@@ -251,15 +258,6 @@ nav ul li a:hover::before{
   .rwd-table td:last-child {
     padding-right: 0;
   }
-}
-
-body {
-  padding: 0 2em;
-  font-family: Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #444;
-  background: #eee;
 }
 
 h1 {

@@ -18,7 +18,7 @@
 </head>
 <header>
         <div class="menu logo-menu">
-            <img src="x.jpg" alt="" width="110" height="60" float="left" padding="8px">
+            <!-- <img src="x.jpg" alt="" width="110" height="60" float="left" padding="8px"> -->
             <nav>
 
                 <ul>
@@ -36,7 +36,7 @@
     <div class="container2">
             
 
-     
+    <tbody> 
         <h1>Administracion de productos</h1>
         <table class="rwd-table">
         <tr>
@@ -51,13 +51,13 @@
             <th scope="col">Eliminar</th>
         </tr>
 
-    <tbody>
+    
         <?php
-            $id_tabla = 1;
+            
             while ($row = mysqli_fetch_array($query)){
         ?>
             <tr>
-                <!-- <td scope="row"><?php echo $id_tabla ?></td> -->
+                
                 <td><?php echo $row['id_producto'] ?></td>
                 <td><?php echo $row['nombre_producto'] ?></td>
                 <td><?php echo $row['marca_producto'] ?></td>
@@ -66,100 +66,64 @@
                 <td><?php echo $row['imagen_producto'] ?></td>
 
                 
-                <!-- <td class="timeregis"><?php echo $row['time'] ?></td>
-                <td class="modificar"><a name="edit" id="" class="modificar_admin" href="/catalogo/modificar_admin.php?id=<?php echo $row['id_productos'] ?>&message=<?php echo $row['proname'] ?>&amount=<?php echo $row['amount']; ?> " role="button">
+                <td class="timeregis"></td>
+                <td class="editar">
+                    <a name="edit" id="" class="editar_admin" href="http://localhost:8081/php/catalogo/editar_admin.php" 
+                   
+                    
+                     role="button">
                     Editar
-                </a></td>
+                    </a>
+                </td>
 
-                <td class="delete"><a name="id" id="" class="eliminar_admin" href="/catalogo/eliminar_admin.php?id=<?php echo $row['id'] ?>" role="button">
+                <!-- <td class="delete"><a name="id" id="" class="eliminar_admin" href="/catalogo/eliminar_admin.php?id=<?php echo $row['id'] ?>" role="button">
                     Eliminar
                 </a></td> -->
                 
             </tr>
         <?php
-            $id_tabla ++;
+            
         } ?>
             
-
-
-        
-
-
-
-
-
-
-
+    </table>
 
     </tbody>
 
-
-<!--    
-        <tr>
-            <td data-th="id_producto">1-2-3...</td>
-            <td data-th="nombre_producto">Nombre del producto</td>
-            <td data-th="marca_producto">Marca</td>
-            <td data-th="tipo_producto">Ropa-zapatos...</td>
-            <td data-th="precio_producto">125€</td>
-            <td data-th="imagen_producto">URL imag</td>
-
-            <td></td>
-            <td data-th="editar">
-                <button>Editar</button>
-            </td>
-            <td data-th="eliminar">
-                <button>Eliminar</button>
-            </td>
-        </tr>
-
-        <tr>
-            <td data-th="id_producto">1-2-3...</td>
-            <td data-th="nombre_producto">Nombre del producto</td>
-            <td data-th="marca_producto">Marca</td>
-            <td data-th="tipo_producto">Ropa-zapatos...</td>
-            <td data-th="precio_producto">125€</td>
-            <td data-th="imagen_producto">URL imag</td>
-
-            <td></td>
-            <td data-th="editar">
-                <button>Editar</button>
-            </td>
-            <td data-th="eliminar">
-                <button>Eliminar</button>
-            </td>
-        </tr>
         
-        <tr>
-            <td data-th="id_producto">1-2-3...</td>
-            <td data-th="nombre_producto">Nombre del producto</td>
-            <td data-th="marca_producto">Marca</td>
-            <td data-th="tipo_producto">Ropa-zapatos...</td>
-            <td data-th="precio_producto">125€</td>
-            <td data-th="imagen_producto">URL imag</td>
-
-            <td></td>
-            <td data-th="editar">
-                <button>Editar</button>
-            </td>
-            <td data-th="eliminar">
-                <button>Eliminar</button>
-            </td>
-        </tr>
-        
-        </table>
-     -->
-
-            
-
-
-
-
-
-
 
     </div>
+        
+    <h2 class="add">Añadir productos</h2>   
+    
+    
+         
+
+    <!-- <div id="titulo-producto">
+        <h2>Añadir Productos</h2>    
+    </div>
+
+    <div class="form col-md-12">
+			<form>			
+				<input type="text" class="col-md-6" placeholder="Nombre">
+				<input type="text" class="col-md-6" placeholder="Marca">
+				<input type="text" class="col-md-6" placeholder="Seccion">
+                <input type="text" class="col-md-6" placeholder="Precio">
+                <input type="text" class="col-md-6" placeholder="Imagen">
+
+				<textarea class="col-md-6" placeholder="Message"></textarea>
+				<input type="button" class="col-md-6" value="Enviar">			
+			</form>
+	</div> -->
+
+
+
+
+
+    
 
     </form>
 
+    
+    
 </body>
 </html>
