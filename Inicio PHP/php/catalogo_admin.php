@@ -1,7 +1,8 @@
 <?php  
+    require_once "/bd.php";
 
-
-
+    $sql_fetch_todos = "SELECT * FROM `productos`";
+    $query = mysqli_query($con, $sql_fetch_todos);
 
 ?>
 
@@ -39,16 +40,61 @@
         <h1>Administracion de productos</h1>
         <table class="rwd-table">
         <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Marca</th>
-            <th>Tipo</th>
-            <th>Precio</th>
-            <th>Imagen</th>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Imagen</th>
             <th></th>
-            <th>Editar</th>
-            <th>Eliminar</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
         </tr>
+
+    <tbody>
+        <?php
+            $id_tabla = 1;
+            while ($row = mysqli_fetch_array($query)){
+        ?>
+            <tr>
+                <!-- <td scope="row"><?php echo $id_tabla ?></td> -->
+                <td><?php echo $row['id_producto'] ?></td>
+                <td><?php echo $row['nombre_producto'] ?></td>
+                <td><?php echo $row['marca_producto'] ?></td>
+                <td><?php echo $row['tipo_producto'] ?></td>
+                <td><?php echo $row['precio_producto'] . " €" ?></td>
+                <td><?php echo $row['imagen_producto'] ?></td>
+
+                
+                <!-- <td class="timeregis"><?php echo $row['time'] ?></td>
+                <td class="modificar"><a name="edit" id="" class="modificar_admin" href="/catalogo/modificar_admin.php?id=<?php echo $row['id_productos'] ?>&message=<?php echo $row['proname'] ?>&amount=<?php echo $row['amount']; ?> " role="button">
+                    Editar
+                </a></td>
+
+                <td class="delete"><a name="id" id="" class="eliminar_admin" href="/catalogo/eliminar_admin.php?id=<?php echo $row['id'] ?>" role="button">
+                    Eliminar
+                </a></td> -->
+                
+            </tr>
+        <?php
+            $id_tabla ++;
+        } ?>
+            
+
+
+        
+
+
+
+
+
+
+
+
+    </tbody>
+
+
+<!--    
         <tr>
             <td data-th="id_producto">1-2-3...</td>
             <td data-th="nombre_producto">Nombre del producto</td>
@@ -101,6 +147,7 @@
         </tr>
         
         </table>
+     -->
 
             
 
