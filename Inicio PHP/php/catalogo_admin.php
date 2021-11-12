@@ -63,24 +63,24 @@
                 <td><?php echo $row['marca_producto'] ?></td>
                 <td><?php echo $row['tipo_producto'] ?></td>
                 <td><?php echo $row['precio_producto'] . " €" ?></td>
-                <td><?php echo $row['imagen_producto'] ?></td>
-
+                <td><img class="img_admin" alt="Imagen del producto" src=<?php echo $row['imagen_producto'] ?>></td>
+               
                 
                 <td class="timeregis"></td>
                 <td class="editar">
-                    <a name="edit" id="" class="editar_admin" href="http://localhost:8081/php/catalogo/editar_admin.php" 
+                    <a class="button" name="edit" id=""  href="/catalogo/editar_admin.php" role="button"> 
                    
-                    
-                     role="button">
                     Editar
+                    
+                    
                     </a>
                 </td>
 
-                <!-- <td class="delete"><a name="id" id="" class="eliminar_admin" href="/catalogo/eliminar_admin.php?id=<?php echo $row['id'] ?>" role="button">
+                <td class="delete"><a name="id" id="" class="eliminar_admin" href="/catalogo/eliminar_admin.php?id=<?php echo $row['id'] ?>" role="button">
                     Eliminar
-                </a></td> -->
+                </a></td>
                 
-            </tr>
+            </tr>   
         <?php
             
         } ?>

@@ -2,27 +2,31 @@
 
 $ipp = 1;
 
-if($ipp != 0){
 
-    $sql = "UPDATE `producto` SET `nombre_producto` = '" . trim($_POST['nombre_producto']) . "' ,amount = '" . trim($_POST['value']) . "' WHERE id = '" . $_POST['id'] . "'";
 
-    if($con->query($sql)){
-        echo "<script>alert('Proceso completado exitósamente')</script>";
-        header("Refresh:0 , url =../list.php");
-        exit();
+    $sql = "UPDATE `producto` SET `nombre_producto` = '" . trim($_POST['nombre_producto']);
+    // if($ipp != 0){
 
-    }
-    else{
-        echo "<script>alert('Inconvenientes para realizar el proceso')</script>";
-        header("Refresh:0 , url =../list.php");
-        exit();
 
-    }
-}
-// else{
-//     echo "<script>alert('Por favor diligencia todos los campos')</script>";
-//     header("Refresh:0 , url = ../list.php");
-//     exit();
-// }
+
+
+    // else{
+    //     echo "<script>alert('Por favor diligencia todos los campos')</script>";
+    //     header("Refresh:0 , url = ../list.php");
+    //     exit();
+    // }
 mysqli_close($con);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>asdddddddddddddddddddddddddddddddd</p>
+</body>
+</html>
