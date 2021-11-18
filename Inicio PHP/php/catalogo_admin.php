@@ -76,7 +76,7 @@
                     </a>
                 </td>
 
-                <td class="delete"><a name="id" id="" class="eliminar_admin" href="catalogo/eliminar_admin.php?id=<?php echo $row['id_producto'] ?>" role="button">
+                <td class="delete"><a name="id_producto" id="" class="eliminar_admin" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
                     Eliminar
                 </a></td>
                 
@@ -114,11 +114,6 @@
 				<input type="button" class="col-md-6" value="Enviar">			
 			</form>
 	</div> -->
-
-
-
-
-
     
 
     </form>
