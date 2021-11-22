@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../style/style-admin-productos.scss">
     <title>Catalogo Admin</title>
 </head>
-<header>
+    <header>
         <div class="menu logo-menu">
             <!-- <img src="x.jpg" alt="" width="110" height="60" float="left" padding="8px"> -->
             <nav>
@@ -32,9 +32,14 @@
     </header>
 <body>
     
+    
+
     <form action="bd_admin.php" method="post">
     <div class="container2">
-            
+
+       <p class="marginTop"></p>
+       
+       
 
     <tbody> 
         <h1>Administracion de productos</h1>
@@ -99,8 +104,87 @@
         <button class="btn first">Añadir</button> 
     </div>
        
+
+    <div class="login">
+
+            <form action="/php/login.php" class="login__form" method="POST">
+
+        <div>
+            <label for="nombre_producto">Nombre del producto</label><br>
+            <input type="text" id="nombre_producto" name="nombre_producto">
+        </div>            
+
+        <div>
+            <label for="marca_producto">Marca del producto</label><br>
+            <input type="text" id="marca_producto" name="marca_producto" >
+        </div>
+
+        <div>
+            <label for="marca_producto">Marca del producto</label><br>
+            <input type="text" id="marca_producto" name="marca_producto" >
+        </div>
+
+        <div>
+            <label for="marca_producto">Marca del producto</label><br>
+            <input type="password" id="marca_producto" name="marca_producto" >
+        </div>
+
+        <div>
+            <label for="Registro">¿No tiene cuenta? Registrese aquí.</label>
+        </div>
+
+        <div class="botones">
+            <input class="button1" type="submit" value="Registrarse" formaction="./register.html">
+            <input class="button2" type="submit" value="Acceder">
+        </div>   
+
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre"><br><br>
+        <label for="Apellidos">Apellidos:</label>
+        <input type="text" id="Apellidos" name="Apellidos"><br><br>
+        <label for="Edad">Edad:</label>
+        <input type="number" id="Edad" name="Edad"><br><br>
+
+        <label for="Correo">Correo electronico:</label>
+        <input type="email" id="Correo" name="Correo"><br><br>
+
+        <label for="Contraseña">Contraseña:</label>
+        <input type="text" id="Contraseña" name="Contraseña"><br><br>
+
+        <label for="Fecha">Fecha de nacimiento:</label>
+        <input type="date" id="Fecha" name="Fecha"><br><br>
+
+        <input type="submit" value="Enviar"> -->
     
-    
+
+
+
+
+
          
 
     <!-- <div id="titulo-producto">
