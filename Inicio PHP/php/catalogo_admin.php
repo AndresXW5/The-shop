@@ -37,7 +37,7 @@
     <form action="bd_admin.php" method="post">
     <div class="container2">
 
-       <p class="marginTop"></p>
+       <!-- <p class="marginTop"></p> -->
        
        
 
@@ -98,11 +98,7 @@
 
     </div>
         
-    <div class="añadir">
-        <h2 class="add">Añadir productos</h2>
-        
-        <button class="btn first">Añadir</button> 
-    </div>
+    <h2 class="add">Añadir productos</h2>
        
 
     <div class="login">
@@ -120,23 +116,28 @@
         </div>
 
         <div>
-            <label for="marca_producto">Marca del producto</label><br>
-            <input type="text" id="marca_producto" name="marca_producto" >
+            <label for="tipo_producto">Tipo del producto</label><br>
+            <input type="text" id="tipo_producto" name="tipo_producto" >
         </div>
 
         <div>
-            <label for="marca_producto">Marca del producto</label><br>
-            <input type="password" id="marca_producto" name="marca_producto" >
+            <label for="precio_producto">Precio del producto</label><br>
+            <input type="text" id="precio_producto" name="precio_producto" >
         </div>
 
         <div>
-            <label for="Registro">¿No tiene cuenta? Registrese aquí.</label>
+            <label for="imagen_producto">Imagen del producto</label><br>
+            <input type="text" id="imagen_producto" name="imagen_producto" >
         </div>
 
-        <div class="botones">
-            <input class="button1" type="submit" value="Registrarse" formaction="./register.html">
-            <input class="button2" type="submit" value="Acceder">
-        </div>   
+        <div class="añadir">
+            
+            <button class="btn first">Añadir</button> 
+        </div>
+
+        <!-- <div class="botones">
+            <input class="button2" type="submit" value="Confirmar cambios">
+        </div>    -->
 
         </form>
 
