@@ -73,16 +73,16 @@
                 
                 <td class="timeregis"></td>
                 <td class="editar">
-                    <a class="button" name="edit" id=""  href="/catalogo/editar_admin.php" role="button"> 
-                   
-                    Editar
+                    <a class="custom-btn btn-7" name="edit" id=""  href="/catalogo/editar_admin.php" role="button"> 
+                    <span>Editar</span>
                     
+                                     
                     
                     </a>
                 </td>
 
-                <td class="delete"><a name="id_producto" id="" class="eliminar_admin" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
-                    Eliminar
+                <td class="delete"><a name="id_producto" id="" class="custom-btn btn-7" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
+                    <span>Eliminar</span> 
                 </a></td>
                 
             </tr>   
@@ -131,8 +131,8 @@
         </div>
 
         <div class="añadir">
+            <button class="custom-btn btn-7"><span>Añadir</span></button>
             
-            <button class="btn first">Añadir</button> 
         </div>
 
         <!-- <div class="botones">
