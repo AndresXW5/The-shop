@@ -96,15 +96,17 @@
 
     </tbody>
 
-    </div>
+    </form>
+
+    </div class="añadirProductos">
         
-    <h2 class="add">Añadir productos</h2>
+    <!-- <h2 class="add">Añadir productos</h2> -->
        
 
     <div class="login">
-
-            <form action="/php/login.php" class="login__form" method="POST">
-
+            <br>
+            <form action="/catalogo/editar_admin.php" class="login__form" method="POST">
+        
         <div>
             <label for="nombre_producto">Nombre del producto</label><br>
             <input type="text" id="nombre_producto" name="nombre_producto">
@@ -114,7 +116,7 @@
             <label for="marca_producto">Marca del producto</label><br>
             <input type="text" id="marca_producto" name="marca_producto" >
         </div>
-
+        
         <div>
             <label for="tipo_producto">Tipo del producto</label><br>
             <input type="text" id="tipo_producto" name="tipo_producto" >
@@ -131,7 +133,7 @@
         </div>
 
         <div class="añadir">
-            <button class="custom-btn btn-7"><span>Añadir</span></button>
+            <button class="custom-btn btn-7" header="./catalogo/editar_admin.php"><span>Añadir</span></button>
             
         </div>
 
@@ -206,7 +208,7 @@
 	</div> -->
     
 
-    </form>
+    
 
     
     
