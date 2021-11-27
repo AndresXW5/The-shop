@@ -30,83 +30,63 @@
             </nav>
         </div>
     </header>
-<body>
-    
-    
+<body>   
 
-    <form action="bd_admin.php" method="post">
-    <div class="container2">
-
-       <!-- <p class="marginTop"></p> -->
-       
-       
-
-    <tbody> 
-        <h1>Administracion de productos</h1>
-        <table class="rwd-table">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Marca</th>
-            <th scope="col">Tipo</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Imagen</th>
-            <th></th>
-            <th scope="col">Editar</th>
-            <th scope="col">Eliminar</th>
-        </tr>
-
-    
-        <?php
-            
-            while ($row = mysqli_fetch_array($query)){
-        ?>
+<form action="bd_admin.php" method="post">
+    <div class="container2">     
+        <tbody> 
+            <h1 class="margenTop">Administracion de productos</h1>
+            <table class="rwd-table">
             <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+                <th></th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+
+            <?php 
+                while ($row = mysqli_fetch_array($query)){
+            ?>
+                <tr>
+                    <td><?php echo $row['id_producto'] ?></td>
+                    <td><?php echo $row['nombre_producto'] ?></td>
+                    <td><?php echo $row['marca_producto'] ?></td>
+                    <td><?php echo $row['tipo_producto'] ?></td>
+                    <td><?php echo $row['precio_producto'] . " €" ?></td>
+                    <td><img class="img_admin" alt="Imagen del producto" src=<?php echo $row['imagen_producto'] ?>></td>
                 
-                <td><?php echo $row['id_producto'] ?></td>
-                <td><?php echo $row['nombre_producto'] ?></td>
-                <td><?php echo $row['marca_producto'] ?></td>
-                <td><?php echo $row['tipo_producto'] ?></td>
-                <td><?php echo $row['precio_producto'] . " €" ?></td>
-                <td><img class="img_admin" alt="Imagen del producto" src=<?php echo $row['imagen_producto'] ?>></td>
-               
-                
-                <td class="timeregis"></td>
-                <td class="editar">
-                    <a class="custom-btn btn-7" name="edit" id=""  href="/catalogo/editar_admin.php" role="button"> 
-                    <span>Editar</span>
+                    <td class="timeregis"></td>
+                    <td class="editar">
+                        <a class="custom-btn btn-7" name="edit" id=""  href="/catalogo/editar_admin.php" role="button"> 
+                        <span>Editar</span>
+                         
+                        </a>
+                    </td>
+
+                    <td class="delete"><a name="id_producto" id="" class="custom-btn btn-7" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
+                        <span>Eliminar</span> 
+                    </a></td>
                     
-                                     
-                    
-                    </a>
-                </td>
+                </tr>   
+            <?php
+            } ?>
+            </table>
+        </tbody>
+    </div>   
+</form>
 
-                <td class="delete"><a name="id_producto" id="" class="custom-btn btn-7" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
-                    <span>Eliminar</span> 
-                </a></td>
-                
-            </tr>   
-        <?php
-            
-        } ?>
-            
 
-            
-    </table>
-
-    </tbody>
-
-    </form>
-
-    </div class="añadirProductos">
-        
-    <!-- <h2 class="add">Añadir productos</h2> -->
-       
+<form action="/catalogo/editar_admin.php" class="login__form" method="POST"> 
 
     <div class="login">
-            <br>
-            <form action="/catalogo/editar_admin.php" class="login__form" method="POST">
-        
+        <br>       
+        <h2 class="add">Añadir productos</h2>
+
         <div>
             <label for="nombre_producto">Nombre del producto</label><br>
             <input type="text" id="nombre_producto" name="nombre_producto">
@@ -136,14 +116,10 @@
             <button class="custom-btn btn-7" header="./catalogo/editar_admin.php"><span>Añadir</span></button>
             
         </div>
-
-        <!-- <div class="botones">
-            <input class="button2" type="submit" value="Confirmar cambios">
-        </div>    -->
-
-        </form>
-
     </div>
+</form>
+
+
 
 
 
@@ -185,11 +161,6 @@
     
 
 
-
-
-
-         
-
     <!-- <div id="titulo-producto">
         <h2>Añadir Productos</h2>    
     </div>
@@ -206,10 +177,6 @@
 				<input type="button" class="col-md-6" value="Enviar">			
 			</form>
 	</div> -->
-    
-
-    
-
     
     
 </body>
