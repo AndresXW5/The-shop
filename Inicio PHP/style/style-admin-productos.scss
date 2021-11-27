@@ -488,7 +488,7 @@ input {
   
   
   .login__form {
-  background-color: #fff;
+  background: linear-gradient(90deg, rgba(0, 0, 3, 0.685) 0%, rgba(56,56,56,1) 33%, rgba(105,105,105,1) 100%);
   border-radius: 0.5em;
   color: #777;
   display: flex;
@@ -519,9 +519,12 @@ input {
   }
   
   .añadir{
-      display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .add{
-    background-color: #777;
+    color: rgb(255, 255, 255);
   }
