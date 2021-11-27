@@ -4,6 +4,13 @@
     $sql_fetch_todos = "SELECT * FROM `productos`";
     $query = mysqli_query($con, $sql_fetch_todos);
 
+
+    //Declaracion variables para almacenar datos
+    // $nombre_producto = $_POST['nombre_producto'];
+
+
+    
+    
 ?>
 
 
@@ -113,8 +120,11 @@
         </div>
 
         <div class="añadir">
-            <button class="custom-btn btn-7" header="./catalogo/editar_admin.php"><span>Añadir</span></button>
-            
+            <button class="custom-btn btn-7"><span>Añadir</span>
+        
+
+            </button>
+            <!-- <input type="submit" value="Enviar">   -->
         </div>
     </div>
 </form>
@@ -130,11 +140,18 @@
 
 
 
+<?php
+
+        //Declaracion variables para almacenar datos
+        $nombre_producto = $_POST['nombre_producto'];
 
 
-
-
-
+            // if(!$con){
+            //     die("No se ha podido realizar la conexion_".mysqli_connect_error()."<br>");
+            // }else{
+                
+            // }
+?>
 
 
 
