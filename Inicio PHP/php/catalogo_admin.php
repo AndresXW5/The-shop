@@ -81,7 +81,7 @@
 </form>
 
 
-<form action="/catalogo/editar_admin.php" class="login__form" method="POST"> 
+<form action="/php/catalogo/editar_admin.php" class="login__form" method="POST"> 
 
     <div class="login">
         <br>       
