@@ -104,9 +104,11 @@ nav ul li a:hover::before{
 /*Lo de abajo de la pagina*/
 .footer{
     background: #d8d8d8;
+    margin-top: 6rem;
     padding: 3.5rem 0;
     text-align: center;
-    margin-top: 6rem;
+    height: 100%;
+    
     
 }
 
@@ -528,3 +530,10 @@ input {
   .add{
     color: rgb(255, 255, 255);
   }
+
+
+
+
+
+
+  

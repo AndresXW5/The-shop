@@ -62,15 +62,24 @@
                 
                     <td class="timeregis"></td>
                     <td class="editar">
+
                         <a class="custom-btn btn-7" name="edit" id=""  href="/catalogo/editar_admin.php" role="button"> 
-                        <span>Editar</span>
-                         
+                            <span>Editar</span>
                         </a>
+
+                        
+                        <!-- <button class="custom-btn btn-7" name="edit" id=""  href="/catalogo/editar_admin.php">
+                            <span>Editar</span>
+                        </button> -->
                     </td>
 
-                    <td class="delete"><a name="id_producto" id="" class="custom-btn btn-7" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
-                        <span>Eliminar</span> 
-                    </a></td>
+                    <td class="delete">
+                        <a name="id_producto" id="" class="custom-btn btn-7" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
+                            <span>Eliminar</span> 
+                        </a>
+
+
+                    </td>
                     
                 </tr>   
             <?php
@@ -121,63 +130,13 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <label for="Nombre">Nombre:</label>
-        <input type="text" id="Nombre" name="Nombre"><br><br>
-        <label for="Apellidos">Apellidos:</label>
-        <input type="text" id="Apellidos" name="Apellidos"><br><br>
-        <label for="Edad">Edad:</label>
-        <input type="number" id="Edad" name="Edad"><br><br>
-
-        <label for="Correo">Correo electronico:</label>
-        <input type="email" id="Correo" name="Correo"><br><br>
-
-        <label for="Contraseña">Contraseña:</label>
-        <input type="text" id="Contraseña" name="Contraseña"><br><br>
-
-        <label for="Fecha">Fecha de nacimiento:</label>
-        <input type="date" id="Fecha" name="Fecha"><br><br>
-
-        <input type="submit" value="Enviar"> -->
-    
-
-
-    <!-- <div id="titulo-producto">
-        <h2>Añadir Productos</h2>    
-    </div>
-
-    <div class="form col-md-12">
-			<form>			
-				<input type="text" class="col-md-6" placeholder="Nombre">
-				<input type="text" class="col-md-6" placeholder="Marca">
-				<input type="text" class="col-md-6" placeholder="Seccion">
-                <input type="text" class="col-md-6" placeholder="Precio">
-                <input type="text" class="col-md-6" placeholder="Imagen">
-
-				<textarea class="col-md-6" placeholder="Message"></textarea>
-				<input type="button" class="col-md-6" value="Enviar">			
-			</form>
-	</div> -->
-    
-    
+<footer class="footer">
+        <div class="container">
+            <p>
+                <!-- Sitio web de SkateXW5 -->
+            </p>
+        </div>
+</footer>
+ 
 </body>
 </html>
