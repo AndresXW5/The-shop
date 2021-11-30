@@ -90,7 +90,7 @@
 </form>
 
 
-<form action="/php/catalogo/editar_admin.php" class="login__form" method="POST"> 
+<form action="/php/catalogo/agregar_admin.php" class="login__form" method="POST"> 
 
     <div class="login">
         <br>       
@@ -122,7 +122,7 @@
         </div>
 
         <div class="añadir">
-            <button class="custom-btn btn-7" header="./catalogo/editar_admin.php"><span>Añadir</span></button>
+            <button class="custom-btn btn-7" header="./catalogo/agregar_admin.php"><span>Añadir</span></button>
             
         </div>
     </div>
