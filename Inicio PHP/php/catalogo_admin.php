@@ -32,7 +32,7 @@
     </header>
 <body>   
 
-<form action="bd_admin.php" method="post">
+<form action="/php/catalogo/editar_admin.php" method="post">
     <div class="container2">     
         <tbody> 
             <h1 class="margenTop">Administracion de productos</h1>
@@ -52,6 +52,7 @@
             <?php 
                 while ($row = mysqli_fetch_array($query)){
             ?>
+
                 <tr>
                     <td><?php echo $row['id_producto'] ?></td>
                     <td><?php echo $row['nombre_producto'] ?></td>
@@ -63,14 +64,9 @@
                     <td class="timeregis"></td>
                     <td class="editar">
 
-                        <a class="custom-btn btn-7" name="edit" id=""  href="/catalogo/editar_admin.php" role="button"> 
+                        <a name="edit" id="" class="custom-btn btn-7" href="catalogo/editar_admin.php?id=<?php echo $row['id_producto'] ?>"role="button"> 
                             <span>Editar</span>
                         </a>
-
-                        
-                        <!-- <button class="custom-btn btn-7" name="edit" id=""  href="/catalogo/editar_admin.php">
-                            <span>Editar</span>
-                        </button> -->
                     </td>
 
                     <td class="delete">

@@ -10,7 +10,7 @@
     $row = mysqli_fetch_assoc($query_delete, MYSQLI_ASSOC);
     if(!$row){
         echo "<script>alert('Eliminación de Producto Exitosa')</script>";        
-        header("Refresh: 1 , url = /php/catalogo_admin.php");
+        header("Refresh: 0 , url = /php/catalogo_admin.php");
         exit();
 
     }
