@@ -12,7 +12,7 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-size: large;
-    padding: 0 2em;
+    padding: 0;
 }
 
 iframe{
@@ -96,10 +96,10 @@ nav ul li a:hover::before{
 
 /*Lo de abajo de la pagina*/
 .footer{
-    background: #d8d8d8;
+    background: #9c9c9c;
     padding: 3.5rem 0;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 3rem;
     
 }
 
