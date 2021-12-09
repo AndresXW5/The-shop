@@ -66,17 +66,15 @@
                     <td class="timeregis"></td>
                     <td class="editar">
 
-                        <a name="edit" id="" class="custom-btn btn-7" href="catalogo/editar_admin.php?id=<?php echo $row['id_producto'] ?>"role="button"> 
+                        <a name="edit" id="" class="custom-btn btn-15" href="catalogo/editar_admin.php?id=<?php echo $row['id_producto'] ?>"role="button"> 
                             <span>Editar</span>
                         </a>
                     </td>
 
                     <td class="delete">
-                        <a name="id_producto" id="" class="custom-btn btn-7" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
-                            <span>Eliminar</span> 
+                        <a name="id_producto" id="" class="custom-btn btn-15" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
+                            <span>Eliminar</span>
                         </a>
-
-
                     </td>
                     
                 </tr>   
