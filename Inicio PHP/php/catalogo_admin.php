@@ -34,7 +34,7 @@
     </header>
 <body>   
 
-<form action="/php/catalogo/editar_admin.php" method="post">
+<form action="/php/catalogo/editar_admin.php" method="POST">
     <div class="container2">     
         <tbody> 
             <h1 class="margenTop">Administracion de productos</h1>
@@ -66,7 +66,7 @@
                     <td class="timeregis"></td>
                     <td class="editar">
 
-                        <a name="edit" id="" class="custom-btn btn-15" href="catalogo/editar_admin.php?id=<?php echo $row['id_producto'] ?>"role="button"> 
+                        <a name="edit" id="" class="custom-btn btn-15" href="catalogo/editar_admin.php?id_producto=<?php echo $row['id_producto'] ?>"role="button"> 
                             <span>Editar</span>
                         </a>
                     </td>
