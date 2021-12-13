@@ -1,11 +1,11 @@
-<?php  
-    require_once "/bd.php";
+<?php
 
-    $sql_fetch_todos = "SELECT * FROM `productos`";
-    $query = mysqli_query($con, $sql_fetch_todos);
+require_once "../bd.php";
+
+$sql_fetch_todos = "SELECT * FROM `productos`";
+$query = mysqli_query($con, $sql_fetch_todos);
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style-admin-productos.scss">
+    <link rel="stylesheet" href="/style/style-admin-productos.scss">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Catalogo Admin</title>
+    <title>Editar producto</title>
 </head>
 
     <header>
@@ -24,20 +24,21 @@
             <nav>
 
                 <ul>
-                    <li><a href="perfil.php">Inicio</a></li>
-                    <li><a href="catalogo.php">Catalogo</a></li>
-                    <li><a href="carrito.php">Carrito</a></li>
-                    <li><a href="usuario.php">Mi usuario</a></li>
+                    <li><a href="/php/perfil.php">Inicio</a></li>
+                    <li><a href="/php/catalogo.php">Catalogo</a></li>
+                    <!-- <li><a href="/php/carrito.php">Carrito</a></li>
+                    <li><a href="/php/usuario.php">Mi usuario</a></li> -->
+                    <li><a href="/php/catalogo_admin.php">Volver</a></li>
                  </ul>
             </nav>
         </div>
     </header>
-<body>   
+<body>
 
 <form action="/php/catalogo/editar_admin.php" method="POST">
     <div class="container2">     
         <tbody> 
-            <h1 class="margenTop">Administracion de productos</h1>
+            <h1 class="margenTop">Editar producto</h1>
             <table class="rwd-table">
             <tr>
                 <th scope="col">ID</th>
@@ -47,14 +48,13 @@
                 <th scope="col">Precio</th>
                 <th scope="col">Imagen</th>
                 <th></th>
-                <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
+                <th scope="col">Confirmar</th>
             </tr>
 
             <?php 
-                while ($row = mysqli_fetch_array($query)){
+                while ($row = mysqli_fetch_array($query)){  //MOSTRAR SOLO EL PRODUCTO CON ID SELECIONADA
             ?>
-
+        
                 <tr>
                     <td><?php echo $row['id_producto'] ?></td>
                     <td><?php echo $row['nombre_producto'] ?></td>
@@ -66,14 +66,8 @@
                     <td class="timeregis"></td>
                     <td class="editar">
 
-                        <a name="edit" id="" class="custom-btn btn-15" href="catalogo/editarPROD_admin.php?id_producto=<?php echo $row['id_producto'] ?>"role="button"> 
-                            <span>Editar</span>
-                        </a>
-                    </td>
-
-                    <td class="delete">
-                        <a name="id_producto" id="" class="custom-btn btn-15" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
-                            <span>Eliminar</span>
+                        <a name="confirm" id="" class="custom-btn btn-15" href="XXXcatalogo/editarPROD_admin.php?id_producto=<?php echo $row['id_producto'] ?>"role="button"> 
+                            <span>Confirmar</span>
                         </a>
                     </td>
                     
@@ -85,12 +79,10 @@
     </div>   
 </form>
 
-
 <form action="/php/catalogo/agregar_admin.php" class="login__form" method="POST"> 
-
     <div class="login">
         <br>       
-        <h2 class="add">Añadir productos</h2>
+        <h2 class="add">Editar</h2>
 
         <div>
             <label for="nombre_producto">Nombre del producto</label><br>
@@ -138,13 +130,8 @@
 
 
 
-<footer class="footer">
-        <div class="container">
-            <p>
-                <!-- Sitio web de SkateXW5 -->
-            </p>
-        </div>
-</footer>
- 
-</body>
+
+
+        
+    </body>
 </html>

@@ -29,7 +29,7 @@ echo "<br>Comprobacion de datos<br>
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         </head>
         <body>
-            <script>
+            <!-- <script>
                 Swal.fire({
                     title: 'Editor de productos',
                     input: 'text',
@@ -61,7 +61,7 @@ echo "<br>Comprobacion de datos<br>
                         imageUrl: result.value.avatar_url
                         })
                     }
-                    })
+                    }) -->
             </script>
         </body>
         </html>
