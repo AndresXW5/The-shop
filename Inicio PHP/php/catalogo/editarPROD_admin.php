@@ -1,8 +1,12 @@
 <?php
 
+$editar = $_GET['id_producto'];
+
 require_once "../bd.php";
 
-$sql_fetch_todos = "SELECT * FROM `productos`";
+$sql_fetch_todos = "SELECT * FROM `productos` WHERE `id_producto` = $editar";
+$sql_fetch_editar = "UPDATE `productod` SET `nombre_producto` = 'NuevoNombre' WHERE `id_producto` = $editar";
+
 $query = mysqli_query($con, $sql_fetch_todos);
 
 ?>
@@ -79,7 +83,7 @@ $query = mysqli_query($con, $sql_fetch_todos);
     </div>   
 </form>
 
-<form action="/php/catalogo/agregar_admin.php" class="login__form" method="POST"> 
+<form action="/php/catalogo/editar_admin.php" class="login__form" method="POST"> 
     <div class="login">
         <br>       
         <h2 class="add">Editar</h2>
@@ -122,7 +126,7 @@ $query = mysqli_query($con, $sql_fetch_todos);
         </div>
 
         <div class="añadir">
-            <button class="custom-btn btn-7" header="./catalogo/agregar_admin.php"><span>Añadir</span></button>
+            <button class="custom-btn btn-15" header="./catalogo/editar_admin.php"><span>Añadir</span></button>
             
         </div>
     </div>
