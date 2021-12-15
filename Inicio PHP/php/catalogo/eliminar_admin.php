@@ -7,7 +7,7 @@
 
     $query_delete = mysqli_query($con,$sql_delete);
 
-    // $row = mysqli_fetch_assoc($query_delete);
+    // $col = mysqli_fetch_assoc($query_delete);
     if($query_delete){
         //HTML para aplicar suitalerte con el script
         ?>

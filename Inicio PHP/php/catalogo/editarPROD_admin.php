@@ -5,7 +5,7 @@ $editar = $_GET['id_producto'];
 require_once "../bd.php";
 
 $sql_fetch_todos = "SELECT * FROM `productos` WHERE `id_producto` = $editar";
-$sql_fetch_editar = "UPDATE `productod` SET `nombre_producto` = 'NuevoNombre' WHERE `id_producto` = $editar";
+// $sql_fetch_editar = "UPDATE `productod` SET `nombre_producto` = 'NuevoNombre' WHERE `id_producto` = $editar";
 
 $query = mysqli_query($con, $sql_fetch_todos);
 
@@ -56,21 +56,21 @@ $query = mysqli_query($con, $sql_fetch_todos);
             </tr>
 
             <?php 
-                while ($row = mysqli_fetch_array($query)){  //MOSTRAR SOLO EL PRODUCTO CON ID SELECIONADA
+                while ($col = mysqli_fetch_array($query)){  //MOSTRAR SOLO EL PRODUCTO CON ID SELECIONADA
             ?>
         
                 <tr>
-                    <td><?php echo $row['id_producto'] ?></td>
-                    <td><?php echo $row['nombre_producto'] ?></td>
-                    <td><?php echo $row['marca_producto'] ?></td>
-                    <td><?php echo $row['tipo_producto'] ?></td>
-                    <td><?php echo $row['precio_producto'] . " €" ?></td>
-                    <td><img class="img_admin" alt="Imagen del producto" src=<?php echo $row['imagen_producto'] ?>></td>
+                    <td><?php echo $col['id_producto'] ?></td>
+                    <td><?php echo $col['nombre_producto'] ?></td>
+                    <td><?php echo $col['marca_producto'] ?></td>
+                    <td><?php echo $col['tipo_producto'] ?></td>
+                    <td><?php echo $col['precio_producto'] . " €" ?></td>
+                    <td><img class="img_admin" alt="Imagen del producto" src=<?php echo $col['imagen_producto'] ?>></td>
                 
                     <td class="timeregis"></td>
                     <td class="editar">
 
-                        <a name="confirm" id="" class="custom-btn btn-15" href="XXXcatalogo/editarPROD_admin.php?id_producto=<?php echo $row['id_producto'] ?>"role="button"> 
+                        <a name="confirm" id="" class="custom-btn btn-15" href="XXXcatalogo/editarPROD_admin.php?id_producto=<?php echo $col['id_producto'] ?>"role="button"> 
                             <span>Confirmar</span>
                         </a>
                     </td>
@@ -87,7 +87,12 @@ $query = mysqli_query($con, $sql_fetch_todos);
     <div class="login">
         <br>       
         <h2 class="add">Editar</h2>
-
+<!-- Nuevo -->
+        <div>
+            <label for="id_producto">Introduzca la id</label><br>
+            <input type="text" id="id_producto" name="id_producto">
+        </div> 
+<!--  -->
         <div>
             <label for="nombre_producto">Nombre del producto</label><br>
             <input type="text" id="nombre_producto" name="nombre_producto">
@@ -97,18 +102,6 @@ $query = mysqli_query($con, $sql_fetch_todos);
             <label for="marca_producto">Marca del producto</label><br>
             <input type="text" id="marca_producto" name="marca_producto" >
         </div>
-
-        <!--    Añadir opciones para elegir la marca y el tipo de producto
-        <div>
-            <select name="OS">
-                <option value="1">Windows Vista</option> 
-                <option value="2">Windows 7</option> 
-                <option value="3">Windows XP</option>
-                <option value="10">Fedora</option> 
-                <option value="11">Debian</option> 
-                <option value="12">Suse</option> 
-            </select>
-        </div> -->
 
         <div>
             <label for="tipo_producto">Tipo del producto</label><br>
@@ -126,7 +119,7 @@ $query = mysqli_query($con, $sql_fetch_todos);
         </div>
 
         <div class="añadir">
-            <button class="custom-btn btn-15" header="./catalogo/editar_admin.php"><span>Añadir</span></button>
+            <button class="custom-btn btn-15" header="./catalogo/editar_admin.php"><span>Confirmar</span></button>
             
         </div>
     </div>
@@ -134,8 +127,5 @@ $query = mysqli_query($con, $sql_fetch_todos);
 
 
 
-
-
-        
-    </body>
+</body>
 </html>

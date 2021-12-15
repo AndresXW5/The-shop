@@ -52,27 +52,27 @@
             </tr>
 
             <?php 
-                while ($row = mysqli_fetch_array($query)){
+                while ($col = mysqli_fetch_array($query)){
             ?>
 
                 <tr>
-                    <td><?php echo $row['id_producto'] ?></td>
-                    <td><?php echo $row['nombre_producto'] ?></td>
-                    <td><?php echo $row['marca_producto'] ?></td>
-                    <td><?php echo $row['tipo_producto'] ?></td>
-                    <td><?php echo $row['precio_producto'] . " €" ?></td>
-                    <td><img class="img_admin" alt="Imagen del producto" src=<?php echo $row['imagen_producto'] ?>></td>
+                    <td><?php echo $col['id_producto'] ?></td>
+                    <td><?php echo $col['nombre_producto'] ?></td>
+                    <td><?php echo $col['marca_producto'] ?></td>
+                    <td><?php echo $col['tipo_producto'] ?></td>
+                    <td><?php echo $col['precio_producto'] . " €" ?></td>
+                    <td><img class="img_admin" alt="Imagen del producto" src=<?php echo $col['imagen_producto'] ?>></td>
                 
                     <td class="timeregis"></td>
                     <td class="editar">
 
-                        <a name="edit" id="" class="custom-btn btn-15" href="catalogo/editarPROD_admin.php?id_producto=<?php echo $row['id_producto'] ?>"role="button"> 
+                        <a name="edit" id="" class="custom-btn btn-15" href="catalogo/editarPROD_admin.php?id_producto=<?php echo $col['id_producto'] ?>"role="button"> 
                             <span>Editar</span>
                         </a>
                     </td>
 
                     <td class="delete">
-                        <a name="id_producto" id="" class="custom-btn btn-15" href="catalogo/eliminar_admin.php?id_producto=<?php echo $row['id_producto'] ?>" role="button">
+                        <a name="id_producto" id="" class="custom-btn btn-15" href="catalogo/eliminar_admin.php?id_producto=<?php echo $col['id_producto'] ?>" role="button">
                             <span>Eliminar</span>
                         </a>
                     </td>
