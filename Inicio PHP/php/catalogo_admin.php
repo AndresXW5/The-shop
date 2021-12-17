@@ -141,7 +141,7 @@
 <footer class="footer">
         <div class="container">
             <p>
-                <!-- Sitio web de SkateXW5 -->
+                Sitio web de SkateXW5
             </p>
         </div>
 </footer>

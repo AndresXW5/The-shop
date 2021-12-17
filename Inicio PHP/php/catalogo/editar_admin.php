@@ -26,7 +26,7 @@ require_once "../bd.php";
         echo "<br>Se ha establecido correctamente la conexion a la base de datos<br>";
 
         // $sql="INSERT INTO `daw2`.`productos` (`id_producto`, `nombre_producto`, `marca_producto`, `tipo_producto`, `precio_producto`, `imagen_producto`) VALUES (NULL, '".$nombre_producto."' , '".$marca_producto."' , '".$tipo_producto."', '".$precio_producto."', '".$imagen_producto."')";
-        $sql="UPDATE `productos` SET `nombre_producto` = '$nombre_producto' WHERE `id_producto` = '".$id_producto."'";
+        $sql="UPDATE `productos` SET `nombre_producto` = '$nombre_producto', `marca_producto` = '$marca_producto', `tipo_producto` = '$tipo_producto', `precio_producto` = '$precio_producto', `imagen_producto` = '$imagen_producto' WHERE `id_producto` = '".$id_producto."'";
 
         // ACTUALIZA `table_name` SET` column_name` = `new_value '[WHERE condition]; WHERE `id_producto` = '$id_producto'
 

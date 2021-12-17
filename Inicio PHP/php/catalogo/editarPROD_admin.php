@@ -30,8 +30,6 @@ $query = mysqli_query($con, $sql_fetch_todos);
                 <ul>
                     <li><a href="/php/perfil.php">Inicio</a></li>
                     <li><a href="/php/catalogo.php">Catalogo</a></li>
-                    <!-- <li><a href="/php/carrito.php">Carrito</a></li>
-                    <li><a href="/php/usuario.php">Mi usuario</a></li> -->
                     <li><a href="/php/catalogo_admin.php">Volver</a></li>
                  </ul>
             </nav>
@@ -51,8 +49,7 @@ $query = mysqli_query($con, $sql_fetch_todos);
                 <th scope="col">Tipo</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Imagen</th>
-                <th></th>
-                <th scope="col">Confirmar</th>
+
             </tr>
 
             <?php 
@@ -69,10 +66,6 @@ $query = mysqli_query($con, $sql_fetch_todos);
                 
                     <td class="timeregis"></td>
                     <td class="editar">
-
-                        <a name="confirm" id="" class="custom-btn btn-15" href="XXXcatalogo/editarPROD_admin.php?id_producto=<?php echo $col['id_producto'] ?>"role="button"> 
-                            <span>Confirmar</span>
-                        </a>
                     </td>
                     
                 </tr>   
