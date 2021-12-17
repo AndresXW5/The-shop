@@ -1,11 +1,15 @@
-<?php  
-    require_once "/bd.php";
+<?php
 
-    $sql_fetch_todos = "SELECT * FROM `productos`";
-    $query = mysqli_query($con, $sql_fetch_todos);
+$editar = $_GET['id_producto'];
+
+require_once "../bd.php";
+
+$sql_fetch_todos = "SELECT * FROM `productos` WHERE `id_producto` = $editar";
+// $sql_fetch_editar = "UPDATE `productod` SET `nombre_producto` = 'NuevoNombre' WHERE `id_producto` = $editar";
+
+$query = mysqli_query($con, $sql_fetch_todos);
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +17,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style-admin-productos.scss">
+    <link rel="stylesheet" href="/style/style-admin-productos.scss">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Catalogo Admin</title>
+    <title>Editar producto</title>
 </head>
 
     <header>
@@ -24,20 +28,19 @@
             <nav>
 
                 <ul>
-                    <li><a href="perfil.php">Inicio</a></li>
-                    <li><a href="catalogo.php">Catalogo</a></li>
-                    <li><a href="carrito.php">Carrito</a></li>
-                    <li><a href="usuario.php">Mi usuario</a></li>
+                    <li><a href="/php/perfil.php">Inicio</a></li>
+                    <li><a href="/php/catalogo.php">Catalogo</a></li>
+                    <li><a href="/php/catalogo_admin.php">Volver</a></li>
                  </ul>
             </nav>
         </div>
     </header>
-<body>   
+<body>
 
 <form action="/php/catalogo/editar_admin.php" method="POST">
     <div class="container2">     
         <tbody> 
-            <h1 class="margenTop">Administracion de productos</h1>
+            <h1 class="margenTop">Editar producto</h1>
             <table class="rwd-table">
             <tr>
                 <th scope="col">ID</th>
@@ -46,15 +49,13 @@
                 <th scope="col">Tipo</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Imagen</th>
-                <th></th>
-                <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
+
             </tr>
 
             <?php 
-                while ($col = mysqli_fetch_array($query)){
+                while ($col = mysqli_fetch_array($query)){  //MOSTRAR SOLO EL PRODUCTO CON ID SELECIONADA
             ?>
-
+        
                 <tr>
                     <td><?php echo $col['id_producto'] ?></td>
                     <td><?php echo $col['nombre_producto'] ?></td>
@@ -65,16 +66,6 @@
                 
                     <td class="timeregis"></td>
                     <td class="editar">
-
-                        <a name="edit" id="" class="custom-btn btn-15" href="catalogo/editarPROD_admin.php?id_producto=<?php echo $col['id_producto'] ?>"role="button"> 
-                            <span>Editar</span>
-                        </a>
-                    </td>
-
-                    <td class="delete">
-                        <a name="id_producto" id="" class="custom-btn btn-15" href="catalogo/eliminar_admin.php?id_producto=<?php echo $col['id_producto'] ?>" role="button">
-                            <span>Eliminar</span>
-                        </a>
                     </td>
                     
                 </tr>   
@@ -85,13 +76,16 @@
     </div>   
 </form>
 
-
-<form action="/php/catalogo/agregar_admin.php" class="login__form" method="POST"> 
-
+<form action="/php/catalogo/editar_admin.php" class="login__form" method="POST"> 
     <div class="login">
         <br>       
-        <h2 class="add">Añadir productos</h2>
-
+        <h2 class="add">Editar</h2>
+<!-- Nuevo -->
+        <div>
+            <label for="id_producto">Introduzca la id</label><br>
+            <input type="text" id="id_producto" name="id_producto">
+        </div> 
+<!--  -->
         <div>
             <label for="nombre_producto">Nombre del producto</label><br>
             <input type="text" id="nombre_producto" name="nombre_producto">
@@ -101,18 +95,6 @@
             <label for="marca_producto">Marca del producto</label><br>
             <input type="text" id="marca_producto" name="marca_producto" >
         </div>
-
-        <!--    Añadir opciones para elegir la marca y el tipo de producto
-        <div>
-            <select name="OS">
-                <option value="1">Windows Vista</option> 
-                <option value="2">Windows 7</option> 
-                <option value="3">Windows XP</option>
-                <option value="10">Fedora</option> 
-                <option value="11">Debian</option> 
-                <option value="12">Suse</option> 
-            </select>
-        </div> -->
 
         <div>
             <label for="tipo_producto">Tipo del producto</label><br>
@@ -130,7 +112,7 @@
         </div>
 
         <div class="añadir">
-            <button class="custom-btn btn-7" header="./catalogo/agregar_admin.php"><span>Añadir</span></button>
+            <button class="custom-btn btn-15" header="./catalogo/editar_admin.php"><span>Confirmar</span></button>
             
         </div>
     </div>
@@ -138,13 +120,5 @@
 
 
 
-<footer class="footer">
-        <div class="container">
-            <p>
-                Sitio web de SkateXW5
-            </p>
-        </div>
-</footer>
- 
 </body>
 </html>
