@@ -1,4 +1,9 @@
 <?php  
+<<<<<<< Updated upstream
+=======
+    //Main
+    require_once "/bd.php";
+>>>>>>> Stashed changes
 
 
 
