@@ -79,37 +79,55 @@ $query = mysqli_query($con, $sql_fetch_todos);
 <form action="/php/catalogo/editar_admin.php" class="login__form" method="POST"> 
     <div class="login">
         <br>       
-        <h2 class="add">Editar</h2>
-<!-- Nuevo -->
+        <h2 class="add">Editar</h2><br>
+
         <div>
-            <label for="id_producto">Introduzca la id</label><br>
+            <label for="id_producto">Introduzca el ID del producto</label><br>
             <input type="text" id="id_producto" name="id_producto">
-        </div> 
-<!--  -->
+        </div><br>
+
         <div>
             <label for="nombre_producto">Nombre del producto</label><br>
             <input type="text" id="nombre_producto" name="nombre_producto">
-        </div>            
+        </div><br>            
 
+           <!-- Añadir opciones para elegir la marca y el tipo de producto -->
         <div>
             <label for="marca_producto">Marca del producto</label><br>
-            <input type="text" id="marca_producto" name="marca_producto" >
-        </div>
+            <select name="marca_producto">
+                <option value="Adidas">Adidas</option> 
+                <option value="Nike SB">Nike SB</option> 
+                <option value="Carhartt">Carhartt</option>
+                <option value="Vans">Vans</option> 
+                <option value="xxx">xxx</option> 
+                <option value="xxx">xxx</option> 
+            </select>
+        </div><br>
 
         <div>
             <label for="tipo_producto">Tipo del producto</label><br>
-            <input type="text" id="tipo_producto" name="tipo_producto" >
-        </div>
+            <select name="tipo_producto">
+                <option value="Camiseta">Camiseta</option> 
+                <option value="Sudadera">Sudadera</option> 
+                <option value="Pantalones">Pantalones</option>
+                <option value="Gorras">Gorras</option> 
+                <option value="Zapatillas">Zapatillas</option> 
+                <option value="Tablas">Tablas</option> 
+                <option value="Ejes">Ejes</option> 
+                <option value="Ruedas">Ruedas</option> 
+                <option value="Otro">Otro</option> 
+            </select>
+        </div><br>
 
         <div>
             <label for="precio_producto">Precio del producto</label><br>
             <input type="text" id="precio_producto" name="precio_producto" >
-        </div>
+        </div><br>
 
         <div>
             <label for="imagen_producto">Imagen del producto</label><br>
             <input type="text" id="imagen_producto" name="imagen_producto" >
-        </div>
+        </div><br>
 
         <div class="añadir">
             <button class="custom-btn btn-15" header="./catalogo/editar_admin.php"><span>Confirmar</span></button>
