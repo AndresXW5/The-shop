@@ -27,7 +27,7 @@
                     <li><a href="perfil.php">Inicio</a></li>
                     <li><a href="catalogo.php">Catalogo</a></li>
                     <li><a href="carrito.php">Carrito</a></li>
-                    <li><a href="usuario.php">Mi usuario</a></li>
+                    <li><a href="usuarios/usuarios_admin.php">Administrar usuarios</a></li>
                  </ul>
             </nav>
         </div>
